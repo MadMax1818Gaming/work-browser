@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10131c">
+  <title>Work Browser</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-view="dashboard"><span class="brand-mark">W</span><span>work<span class="brand-light">space</span><small>YOUR WORK, ORGANIZED</small></span></a>
+      <button class="workspace-switch"><span class="avatar">M</span><span><b>My workspace</b><small>Personal</small></span><span class="chevron">⌄</span></button>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="main-nav">
+        <button class="nav-item active" data-view="dashboard"><span>▦</span> Overview</button>
+        <button class="nav-item" data-view="projects"><span>▣</span> Projects <kbd>P</kbd></button>
+        <button class="nav-item" data-view="tasks"><span>☑</span> Tasks <kbd>T</kbd></button>
+        <button class="nav-item" data-view="notes"><span>▤</span> Notes <kbd>N</kbd></button>
+        <button class="nav-item" data-view="bookmarks"><span>◇</span> Bookmarks <kbd>B</kbd></button>
+      </nav>
+      <div class="sidebar-section"><div class="nav-label">YOUR PROJECTS <button id="quickAddProject" title="Add project">＋</button></div><div id="projectNav" class="project-nav"></div></div>
+      <div class="sidebar-bottom"><div class="storage-status"><span class="status-dot"></span><span><b>Saved on this device</b><small>Your data stays private</small></span></div><button class="nav-item" data-view="settings"><span>⚙</span> Settings & backup</button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="breadcrumbs"><span>Workspace</span><span>/</span><b id="crumbCurrent">Overview</b></div><div class="top-actions"><button class="search-trigger" id="searchOpen">⌕ <span>Search anything...</span><kbd>Ctrl K</kbd></button><button class="icon-button" id="themeToggle" title="Toggle theme">◐</button><div class="avatar small-avatar">M</div></div></header>
+      <section class="content" id="viewRoot"></section>
+      <footer class="footer"><span>WORKSPACE <b>0.1.0</b></span><span>Local-first · Your information stays on this device</span></footer>
+    </main>
+  </div>
+  <div class="modal-backdrop hidden" id="modalBackdrop"><section class="modal" id="modal" role="dialog" aria-modal="true"></section></div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <script src="assets/js/store.js"></script><script src="assets/js/app.js"></script>
+</body>
+</html>
