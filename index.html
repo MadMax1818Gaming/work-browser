@@ -24,6 +24,16 @@
       <div class="sidebar-bottom"><div class="storage-status"><span class="status-dot"></span><span><b>Saved on this device</b><small>Your data stays private</small></span></div><button class="nav-item" data-view="settings"><span>⚙</span> Settings & backup</button></div>
     </aside>
     <main class="main-area">
+      <div class="browser-chrome">
+        <div class="browser-tabs" id="browserTabs" role="tablist" aria-label="Work Browser tabs">
+          <button class="browser-tab active" role="tab" aria-selected="true" data-view="dashboard"><span class="tab-glyph">◈</span><span>Workspace</span></button>
+          <button class="browser-tab" role="tab" aria-selected="false" data-view="gmail"><span class="tab-glyph gmail-glyph">✉</span><span>Gmail</span><span class="tab-close">↗</span></button>
+          <button class="browser-tab" role="tab" aria-selected="false" data-view="google"><span class="tab-glyph google-glyph">G</span><span>Google</span></button>
+          <button class="browser-tab" role="tab" aria-selected="false" data-view="chat"><span class="tab-glyph chat-glyph">✳</span><span>AI Chat</span></button>
+          <button class="new-browser-tab" id="newBrowserTab" title="Open Google Search">＋</button>
+        </div>
+        <div class="browser-tools"><span class="browser-secure">●</span><span>work-browser</span><span class="browser-tool-spacer"></span><button class="browser-tool" id="reloadWorkspace" title="Refresh workspace">↻</button></div>
+      </div>
       <header class="topbar"><div class="breadcrumbs"><span>Workspace</span><span>/</span><b id="crumbCurrent">Overview</b></div><div class="top-actions"><button class="search-trigger" id="searchOpen">⌕ <span>Search anything...</span><kbd>Ctrl K</kbd></button><button class="icon-button" id="themeToggle" title="Toggle theme">◐</button><div class="avatar small-avatar">M</div></div></header>
       <section class="content" id="viewRoot"></section>
       <footer class="footer"><span>WORKSPACE <b>0.1.0</b></span><span>Local-first · Your information stays on this device</span></footer>
