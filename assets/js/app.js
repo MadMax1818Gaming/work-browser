@@ -20,7 +20,10 @@
     if(view==="tasks") root.innerHTML=heading("WORKSPACE","Tasks","Keep track of what needs to get done.",button("＋ Add task","new-task"))+'<div class="toolbar"><input class="search-field" id="taskFilter" placeholder="Filter tasks..." value="'+esc(query)+'"><select id="taskStatus"><option value="all">All tasks</option><option value="open">To do</option><option value="done">Completed</option></select></div>'+taskRows(store.tasks().filter(t=>(!query||t.title.toLowerCase().includes(query.toLowerCase()))&&(filter==="all"||(filter==="done"?t.done:!t.done))));
     if(view==="notes") root.innerHTML=heading("KNOWLEDGE","Notes","Save useful information and project decisions.",button("＋ New note","new-note"))+notesGrid(store.notes());
     if(view==="bookmarks") root.innerHTML=heading("QUICK ACCESS","Bookmarks","Keep useful websites and resources in one place.",button("＋ Add bookmark","new-bookmark"))+bookmarksGrid(store.bookmarks());
-    if(view==="settings") root.innerHTML=settingsView();\n    if(view==="gmail") root.innerHTML=gmailView();\n    if(view==="google") root.innerHTML=googleView();\n    if(view==="chat") root.innerHTML=chatView();
+    if(view==="settings") root.innerHTML=settingsView();
+    if(view==="gmail") root.innerHTML=gmailView();
+    if(view==="google") root.innerHTML=googleView();
+    if(view==="chat") root.innerHTML=chatView();
     if(view==="project") root.innerHTML=projectView();
   }
   function dashboard(){
